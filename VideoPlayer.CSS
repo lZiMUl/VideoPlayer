@@ -51,7 +51,7 @@ Body {
     Border: 3Px Solid;
 }
 
-#Choose {
+#Show, #Choose {
     Width: 100%;
     Height: 100%;
     Margin-Top: 6Px;
