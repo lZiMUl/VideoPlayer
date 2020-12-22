@@ -55,7 +55,7 @@ class VideoPlayer {
 			Options ['Frame'] ['appendChild'] (VideoPlayer ['CreateProgramList']);
 			
 			//插入根部
-			if (!(Options ['Customize'] && ptions ['Customize'] === true))
+			if (!(Options ['Customize'] && Options ['Customize'] === true))
 			document ['body'] ['appendChild'] (VideoPlayer ['CreateLink']);
 			
 			VideoPlayer ['LoadProgramList'] ();
