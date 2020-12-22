@@ -30,7 +30,7 @@ class VideoPlayer {
 
 			//配置元素
 			VideoPlayer ['CreateLink'] ['setAttribute'] ('Rel', 'StyleSheet');
-			VideoPlayer ['CreateLink'] ['setAttribute'] ('Href', 'http://lzimul.free.idcfengye.com/VideoPlayer.CSS');
+			VideoPlayer ['CreateLink'] ['setAttribute'] ('Href', 'https://cdn.jsdelivr.net/gh/IZIMUI/VideoPlayer/VideoPlayer.CSS');
 			VideoPlayer ['CreateVideo'] ['setAttribute'] ('Autoplay', true);
 			VideoPlayer ['CreateVideo'] ['setAttribute'] ('Controls', true);
 			
@@ -55,6 +55,7 @@ class VideoPlayer {
 			Options ['Frame'] ['appendChild'] (VideoPlayer ['CreateProgramList']);
 			
 			//插入根部
+			if (!(Options ['Customize'] && ptions ['Customize'] === true))
 			document ['body'] ['appendChild'] (VideoPlayer ['CreateLink']);
 			
 			VideoPlayer ['LoadProgramList'] ();
@@ -68,14 +69,17 @@ class VideoPlayer {
 			}));
 
 			let Judge = setInterval (() => {
-				if (VideoPlayer ['Value'] === VideoPlayer ['Source'] ['ProgramList'] ['length'] - 1) clearInterval(Judge);
-				if (Options ['ListPlaying'] && VideoPlayer ['CreateVideo'] ['ended']) this ['Next'] ()
+				if (VideoPlayer ['Value'] === VideoPlayer ['Source'] ['ProgramList'] ['length'] - 1) 
+				clearInterval(Judge);
+				if (Options ['ListPlaying'] && Options ['ListPlaying'] === true && VideoPlayer ['CreateVideo'] ['ended'])
+				this ['Next'] ()
 			}, true)
 		}
 	};
 
 	Previous () {
-		if (VideoPlayer ['Value'] !== 0) VideoPlayer ['Update_VideoPlayer_Source'] (new Object({
+		if (VideoPlayer ['Value'] !== 0)
+		VideoPlayer ['Update_VideoPlayer_Source'] (new Object({
 			"Type": "Button",
 			"Data": VideoPlayer ['Source'],
 			"Title": VideoPlayer ['CreateTitle'],
@@ -88,7 +92,8 @@ class VideoPlayer {
 	};
 
 	Next () {
-		if (VideoPlayer ['Value'] !== VideoPlayer ['Source'] ['ProgramList'] ['length'] - 1) VideoPlayer ['Update_VideoPlayer_Source'] (new Object({
+		if (VideoPlayer ['Value'] !== VideoPlayer ['Source'] ['ProgramList'] ['length'] - 1)
+		VideoPlayer ['Update_VideoPlayer_Source'] (new Object({
 			"Type": "Load",
 			"Data": VideoPlayer ['Source'],
 			"Title": VideoPlayer ['CreateTitle'],
