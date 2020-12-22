@@ -1,0 +1,66 @@
+Body {
+    Background: Gray;
+}
+
+#Frame {
+    Text-Align: Center;
+}
+
+#Title {
+    Width: 100%;
+    Height: 100%;
+    Border-Radius: 8Px;
+    Border: 3Px Solid;
+}
+
+#Medio {
+    Width: 100%;
+    Height: 100%;
+    Text-Align: Center;
+    Border-Radius: 8Px;
+    Border: 3Px Solid;
+}
+
+#Controls {
+    Width: 100%;
+    Height: 100%;
+    Text-Align: Center;
+}
+
+#Previous, #Next {
+    Width: 49%;
+    Height: 100%;
+    Border-Radius: 8Px;
+    Border: 3Px Solid;
+}
+
+#Previous {
+    Float: Left;
+}
+
+#Next {
+    Float: Right;
+}
+
+#ProgramList {
+    Width: 100%;
+    Height: 100%;
+    Margin-Top: 30Px;
+    Text-Align: Center;
+    Border-Radius: 8Px;
+    Border: 3Px Solid;
+}
+
+#Choose {
+    Width: 100%;
+    Height: 100%;
+    Margin-Top: 6Px;
+    Margin-Left: -23Px;
+    Text-Align: Center;
+    Border-Radius: 8Px;
+    Border: 3Px Solid;
+}
+
+Ul {
+    List-Style: None;
+}
