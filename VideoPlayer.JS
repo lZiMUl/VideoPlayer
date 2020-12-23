@@ -32,7 +32,7 @@ class VideoPlayer {
 			VideoPlayer ['CreateLink'] ['setAttribute'] ('Href', 'https://cdn.jsdelivr.net/gh/IZIMUI/VideoPlayer/VideoPlayer.CSS');
 			VideoPlayer ['CreateVideo'] ['setAttribute'] ('Autoplay', true);
 			VideoPlayer ['CreateVideo'] ['setAttribute'] ('Controls', true);
-			VideoPlayer ['CreateTitle'] ['appendChild'] (document ['createTextNode'] (Options ['Source'] ['Title']);
+			VideoPlayer ['CreateTitle'] ['appendChild'] (document ['createTextNode'] (Options ['Source'] ['Title']));
 			VideoPlayer ['CreatePreviousButton'] ['appendChild'] (document ['createTextNode'] ('上一期'));
 			VideoPlayer ['CreateNextButton'] ['appendChild'] (document ['createTextNode'] ('下一期'));
 			VideoPlayer ['CreatePreviousButton'] ['addEventListener'] ('click', this ['Previous']);
@@ -126,9 +126,7 @@ class VideoPlayer {
 	};
 	
 	static UpdateShow () {
-		VideoPlayer ['ProgramShow'] ['forEach'] (Element => {
-			Element ['style'] ['background'] = 'none'
-		});
+		VideoPlayer ['ProgramShow'] ['forEach'] (Element => Element ['style'] ['background'] = 'none');
 		VideoPlayer ['ProgramShow'] [VideoPlayer ['Value']] ['style'] ['background'] = VideoPlayer ['FocusColor']
 	}
 }
