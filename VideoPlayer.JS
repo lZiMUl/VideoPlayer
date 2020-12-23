@@ -32,6 +32,7 @@ class VideoPlayer {
 			VideoPlayer ['CreateLink'] ['setAttribute'] ('Href', 'https://cdn.jsdelivr.net/gh/IZIMUI/VideoPlayer/VideoPlayer.CSS');
 			VideoPlayer ['CreateVideo'] ['setAttribute'] ('Autoplay', true);
 			VideoPlayer ['CreateVideo'] ['setAttribute'] ('Controls', true);
+			VideoPlayer ['CreateTitle'] ['appendChild'] (document ['createTextNode'] (Options ['Source'] ['Title']);
 			VideoPlayer ['CreatePreviousButton'] ['appendChild'] (document ['createTextNode'] ('上一期'));
 			VideoPlayer ['CreateNextButton'] ['appendChild'] (document ['createTextNode'] ('下一期'));
 			VideoPlayer ['CreatePreviousButton'] ['addEventListener'] ('click', this ['Previous']);
@@ -50,7 +51,6 @@ class VideoPlayer {
 			VideoPlayer ['UpdateVideoPlayerSource'] (new Object({
 				"Type": "Button",
 				"Data": VideoPlayer ['Source'],
-				"Title": VideoPlayer ['CreateTitle'],
 				"Video": VideoPlayer ['CreateVideo'],
 				"Source": VideoPlayer ['CreateSource'],
 				"Value": VideoPlayer ['Value']
@@ -70,7 +70,6 @@ class VideoPlayer {
 		VideoPlayer ['UpdateVideoPlayerSource'] (new Object({
 			"Type": "Button",
 			"Data": VideoPlayer ['Source'],
-			"Title": VideoPlayer ['CreateTitle'],
 			"Video": VideoPlayer ['CreateVideo'],
 			"Source": VideoPlayer ['CreateSource'],
 			"Value": -- VideoPlayer ['Value']
@@ -85,7 +84,6 @@ class VideoPlayer {
 		VideoPlayer ['UpdateVideoPlayerSource'] (new Object({
 			"Type": "Load",
 			"Data": VideoPlayer ['Source'],
-			"Title": VideoPlayer ['CreateTitle'],
 			"Video": VideoPlayer ['CreateVideo'],
 			"Source": VideoPlayer ['CreateSource'],
 			"Value": ++ VideoPlayer ['Value']
@@ -96,13 +94,10 @@ class VideoPlayer {
 	};
 	
 	static UpdateVideoPlayerSource (Options) {
-		if (Options ['Type'] === 'Load' || Options ['Type'] === 'Button') {
-			Options ['Title'] ['innerHTML'] = Options ['Data'] ['ProgramList'] [Options ['Value']] ['Title'];
-			Options ['Source'] ['src'] = Options ['Data'] ['ProgramList'] [Options ['Value']] ['Url']
-		} else if (Options ['Type'] === 'List') {
-			Options ['Title'] ['innerHTML'] = Options ['Data'] [0];
-			Options ['Source'] ['src'] = Options ['Data'] [1]
-		};
+		if (Options ['Type'] === 'Load' || Options ['Type'] === 'Button')
+		Options ['Source'] ['src'] = Options ['Data'] ['ProgramList'] [Options ['Value']] ['Url'];
+		else if (Options ['Type'] === 'List')
+		Options ['Source'] ['src'] = Options ['Data'] [1];
 		Options ['Video'] ['load'] ();
 		Options ['Video'] ['play'] ()
 	};
@@ -118,7 +113,6 @@ class VideoPlayer {
 					VideoPlayer ['UpdateVideoPlayerSource'] (new Object({
 						"Type": "List",
 						"Data": [Source['Title'], Source['Url']],
-						"Title": VideoPlayer ['CreateTitle'],
 						"Video": VideoPlayer ['CreateVideo'],
 						"Source": VideoPlayer ['CreateSource']
 					}));
