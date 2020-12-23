@@ -22,7 +22,7 @@ class VideoPlayer {
 				VideoPlayer ['Source'] ['ProgramList'] [Value] ['Url'] = `../Videos/${Source['Url']}`
 			});
 			VideoPlayer ['CreateTitle'] ['setAttribute'] ('Id', 'Title');
-			VideoPlayer ['CreateVideo'] ['setAttribute'] ('Id', 'Medio');
+			VideoPlayer ['CreateVideo'] ['setAttribute'] ('Id', 'Video');
 			VideoPlayer ['CreateSource'] ['setAttribute'] ('Id', 'Source');
 			VideoPlayer ['CreateControls'] ['setAttribute'] ('Id', 'Controls');
 			VideoPlayer ['CreateProgramList'] ['setAttribute'] ('Id', 'ProgramList');
@@ -51,7 +51,7 @@ class VideoPlayer {
 				"Type": "Button",
 				"Data": VideoPlayer ['Source'],
 				"Title": VideoPlayer ['CreateTitle'],
-				"VideoPlayer": VideoPlayer ['CreateVideo'],
+				"Video": VideoPlayer ['CreateVideo'],
 				"Source": VideoPlayer ['CreateSource'],
 				"Value": VideoPlayer ['Value']
 			}));
@@ -71,7 +71,7 @@ class VideoPlayer {
 			"Type": "Button",
 			"Data": VideoPlayer ['Source'],
 			"Title": VideoPlayer ['CreateTitle'],
-			"VideoPlayer": VideoPlayer ['CreateVideo'],
+			"Video": VideoPlayer ['CreateVideo'],
 			"Source": VideoPlayer ['CreateSource'],
 			"Value": -- VideoPlayer ['Value']
 		}));
@@ -86,7 +86,7 @@ class VideoPlayer {
 			"Type": "Load",
 			"Data": VideoPlayer ['Source'],
 			"Title": VideoPlayer ['CreateTitle'],
-			"VideoPlayer": VideoPlayer ['CreateVideo'],
+			"Video": VideoPlayer ['CreateVideo'],
 			"Source": VideoPlayer ['CreateSource'],
 			"Value": ++ VideoPlayer ['Value']
 		}));
@@ -103,8 +103,8 @@ class VideoPlayer {
 			Options ['Title'] ['innerHTML'] = Options ['Data'] [0];
 			Options ['Source'] ['src'] = Options ['Data'] [1]
 		};
-		Options ['VideoPlayer'] ['load'] ();
-		Options ['VideoPlayer'] ['play'] ()
+		Options ['Video'] ['load'] ();
+		Options ['Video'] ['play'] ()
 	};
 	
 	static LoadProgramList () {
@@ -119,7 +119,7 @@ class VideoPlayer {
 						"Type": "List",
 						"Data": [Source['Title'], Source['Url']],
 						"Title": VideoPlayer ['CreateTitle'],
-						"VideoPlayer": VideoPlayer ['CreateVideo'],
+						"Video": VideoPlayer ['CreateVideo'],
 						"Source": VideoPlayer ['CreateSource']
 					}));
 					VideoPlayer ['UpdateShow'] ()
