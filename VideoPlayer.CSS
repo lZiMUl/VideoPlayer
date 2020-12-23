@@ -9,6 +9,9 @@ Body {
 #Title {
     Width: 100%;
     Height: 100%;
+    Position: Relative;
+    Top: -4Px;
+    Left: -3.3Px;
     Border-Radius: 8Px;
     Border: 3Px Solid;
 }
@@ -16,34 +19,19 @@ Body {
 #Video {
     Width: 100%;
     Height: 230Px;
+    Position: Relative;
+    Top: -12Px;
+    Left: -3.3Px;
     Text-Align: Center;
     Border-Radius: 8Px;
     Border: 3Px Solid;
-}
-
-#Controls {
-    Width: 100%;
-    Height: 100%;
-    Text-Align: Center;
-}
-
-#Previous, #Next {
-    Width: 49%;
-    Height: 100%;
-    Border-Radius: 8Px;
-    Border: 3Px Solid;
-}
-
-#Previous {
-    Float: Left;
-}
-
-#Next {
-    Float: Right;
 }
 
 #ProgramList {
-    Width: 100%;
+    Width: 98.5%;
+    Position: Relative;
+    Top: -34Px;
+    Left: -3.3Px;
     Height: 100%;
     Margin-Top: 30Px;
     Text-Align: Center;
