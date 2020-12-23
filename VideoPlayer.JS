@@ -6,9 +6,6 @@ class VideoPlayer {
 	static CreateTitle = document ['createElement'] ('H3');
 	static CreateVideo = document ['createElement'] ('VIDEO');
 	static CreateSource = document ['createElement'] ('SOURCE');
-	static CreateControls = document ['createElement'] ('DIV');
-	static CreatePreviousButton = document ['createElement'] ('BUTTON');
-	static CreateNextButton = document ['createElement'] ('BUTTON');
 	static CreateProgramList = document ['createElement'] ('DIV');
 	static CreateUL = document ['createElement'] ('UL');
 	static Value = 0;
@@ -24,26 +21,16 @@ class VideoPlayer {
 			VideoPlayer ['CreateTitle'] ['setAttribute'] ('Id', 'Title');
 			VideoPlayer ['CreateVideo'] ['setAttribute'] ('Id', 'Video');
 			VideoPlayer ['CreateSource'] ['setAttribute'] ('Id', 'Source');
-			VideoPlayer ['CreateControls'] ['setAttribute'] ('Id', 'Controls');
 			VideoPlayer ['CreateProgramList'] ['setAttribute'] ('Id', 'ProgramList');
-			VideoPlayer ['CreatePreviousButton'] ['setAttribute'] ('Id', 'Previous');
-			VideoPlayer ['CreateNextButton'] ['setAttribute'] ('Id', 'Next');
 			VideoPlayer ['CreateLink'] ['setAttribute'] ('Rel', 'StyleSheet');
 			VideoPlayer ['CreateLink'] ['setAttribute'] ('Href', 'https://cdn.jsdelivr.net/gh/IZIMUI/VideoPlayer/VideoPlayer.CSS');
 			VideoPlayer ['CreateVideo'] ['setAttribute'] ('Autoplay', true);
 			VideoPlayer ['CreateVideo'] ['setAttribute'] ('Controls', true);
 			VideoPlayer ['CreateTitle'] ['appendChild'] (document ['createTextNode'] (Options ['Source'] ['Title']));
-			VideoPlayer ['CreatePreviousButton'] ['appendChild'] (document ['createTextNode'] ('上一期'));
-			VideoPlayer ['CreateNextButton'] ['appendChild'] (document ['createTextNode'] ('下一期'));
-			VideoPlayer ['CreatePreviousButton'] ['addEventListener'] ('click', this ['Previous']);
-			VideoPlayer ['CreateNextButton'] ['addEventListener'] ('click', this ['Next']);
 			VideoPlayer ['CreateVideo'] ['appendChild'] (VideoPlayer ['CreateSource']);
-			VideoPlayer ['CreateControls'] ['appendChild'] (VideoPlayer ['CreatePreviousButton']);
-			VideoPlayer ['CreateControls'] ['appendChild'] (VideoPlayer ['CreateNextButton']);
 			VideoPlayer ['CreateProgramList'] ['appendChild'] (VideoPlayer ['CreateUL']);
 			Options ['Frame'] ['appendChild'] (VideoPlayer ['CreateTitle']);
 			Options ['Frame'] ['appendChild'] (VideoPlayer ['CreateVideo']);
-			Options ['Frame'] ['appendChild'] (VideoPlayer ['CreateControls']);
 			Options ['Frame'] ['appendChild'] (VideoPlayer ['CreateProgramList']);
 			if (! (Options ['Customize'] && Options ['Customize'] === true))
 			document ['body'] ['appendChild'] (VideoPlayer ['CreateLink']);
