@@ -117,3 +117,5 @@ class VideoPlayer {
 		VideoPlayer ['ProgramShow'] [VideoPlayer ['Value']] ['style'] ['background'] = VideoPlayer ['FocusColor']
 	}
 }
+
+export default VideoPlayer;
