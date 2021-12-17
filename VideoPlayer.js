@@ -81,3 +81,5 @@ export default VideoPlayer;
     }, 1000);
   };
 };
+
+export default VideoPlayer;
