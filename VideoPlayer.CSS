@@ -1,14 +1,15 @@
-Body {
+body {
     Background: Gray;
 }
 
-#Frame {
+#videoBox {
     Text-Align: Center;
 }
 
-#Title {
+.title {
     Width: 100%;
-    Height: 100%;
+    Height: 30px;
+    padding-top: 7px;
     Position: Relative;
     Top: -4Px;
     Left: -3.3Px;
@@ -16,7 +17,7 @@ Body {
     Border: 3Px Solid;
 }
 
-#Video {
+.video {
     Width: 100%;
     Height: 230Px;
     Position: Relative;
@@ -27,7 +28,7 @@ Body {
     Border: 3Px Solid;
 }
 
-#ProgramList {
+.programList {
     Width: 98.5%;
     Position: Relative;
     Top: -34Px;
@@ -39,7 +40,7 @@ Body {
     Border: 3Px Solid;
 }
 
-#Choose {
+.choose {
     Width: 100%;
     Height: 100%;
     Margin-Top: 6Px;
@@ -49,6 +50,6 @@ Body {
     Border: 3Px Solid;
 }
 
-Ul {
+ul {
     List-Style: None;
 }
