@@ -33,8 +33,6 @@ class VideoPlayer {
       throw new Error('錯誤參數');
     };
   };
-
-export default VideoPlayer;
   
   static playVideo(source, index, chooseColor) {
     document.getElementsByName('program').forEach(item => item.setAttribute('style', null))
