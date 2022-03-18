@@ -79,3 +79,6 @@ class VideoPlayer {
     }, 1000);
   };
 };
+
+
+export default VideoPlayer;
